@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Case Study 1 | Hailey Rice</title>
+
+<link rel="stylesheet" href="PortfolioCSS.css">
+
+<style>
+
+/* =====================================================
+   CASE STUDY PAGE
+===================================================== */
+
+.case-study-page {
+    background: var(--light-grey);
+    color: var(--charcoal);
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+}
+
+/* Make the floating navigation text white on this page */
+.case-study-page .main-nav a {
+    color: #ffffff;
+}
+
+.case-study-page .main-nav a:hover {
+    color: var(--pink);
+}
+
+/* PAGE WRAPPER */
+.case-study-wrapper {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 105px;
+    padding-bottom: 20px;
+}
+
+/* =====================================================
+   INTRO: TITLE / RULE LEFT + DESCRIPTION RIGHT
+===================================================== */
+.case-study-intro {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-intro {
+    display: grid;
+    grid-template-columns: 32% 58%;
+    column-gap: 10%;
+    align-items: start;
+    margin-bottom: 48px;
+	
+}
+
+.case-study-heading {
+    padding-top: 2px;
+}
+
+.case-study-title {
+    font-size: clamp(32px, 5vw, 54px);;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    text-align: left;
+	 white-space: nowrap;
+}
+	.case-study-subtitle {
+    font-size: clamp(16px, 2.2vw, 22px); /* smaller but still noticeable */
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 14px;
+    color: var(--charcoal);
+}
+
+.case-study-line {
+    width: 100%; /* full width of the title column */
+    max-width: 350px; /* same vibe as ABOUT page */
+    height: 6px;
+    background: var(--pink);
+    margin: 0 0 22px;
+}
+
+.case-study-blurb {
+     max-width: none;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6; /* increased spacing */
+    text-align: left;
+}
+
+/* =====================================================
+   IMAGE PLACEHOLDERS
+   White boxes with the same soft drop-shadow treatment
+===================================================== */
+.case-study-photo {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-photo {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================================================
+   1. LARGE HERO MOCKUP
+===================================================== */
+
+.case-study-hero {
+    aspect-ratio: 1.75 / 1;;
+    margin-bottom: 22px;
+}
+
+/* =====================================================
+   2. SECOND FULL-WIDTH MOCKUP
+===================================================== */
+
+.case-study-feature {
+    aspect-ratio: 2/1;
+    margin-bottom: 22px;
+}
+
+/* =====================================================
+   3. TWO-COLUMN GRID
+===================================================== */
+.case-study-grid-wrapper {
+    max-width: 900px; /* same as your other images */
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.case-study-grid .case-study-photo {
+    aspect-ratio: 1.75 / 1;
+}
+
+/* =====================================================
+   4. SINGLE FULL-WIDTH MOCKUPS
+===================================================== */
+
+.case-study-single {
+    aspect-ratio: 1.17 / 1;
+    margin-bottom: 22px;
+}
+	/* WEBSITE MOCKUP 1 — 1910 x 2489 */
+.case-study-web-1 {
+    aspect-ratio: 0.77 / 1;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* WEBSITE MOCKUP 2 — 1905 x 1801 */
+.case-study-web-2 {
+    aspect-ratio: 1.06 / 1;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* WEBSITE MOCKUP 3 — 1897 x 1796 */
+.case-study-web-3 {
+    aspect-ratio: 1.06 / 1; /* same ratio as mockup 2 */
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-single:last-child {
+    margin-bottom: 0;
+}
+
+/* FOOTER SPACING */
+.site-footer {
+    margin-top: 65px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .case-study-wrapper {
+        width: 92%;
+        padding-top: 90px;
+    }
+
+    .case-study-intro {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .case-study-title {
+        font-size: 26px;
+		 white-space: nowrap;
+    }
+
+    .case-study-blurb {
+       max-width: none;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6; /* increased spacing */
+    text-align: left;
+}
+
+    .case-study-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-grid .case-study-photo {
+        aspect-ratio: 1.48 / 1;
+    }
+}
+
+</style>
+</head>
+
+<body class="case-study-page">
+
+<!-- =====================================================
+     HEADER / FLOATING NAV
+===================================================== -->
+
+<header class="site-header">
+    <a href="index.html" class="logo">HAILEY RICE</a>
+<div class="header-right">
+    <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =====================================================
+     CASE STUDY CONTENT
+===================================================== -->
+
+<main class="case-study-wrapper">
+
+    <!-- TITLE + DESCRIPTION -->
+    <section class="case-study-intro">
+
+        <div class="case-study-heading">
+    <h1 class="case-study-title">VHS TO MP4</h1>
+
+    <p class="case-study-subtitle">
+        Branding, visual identity, concept development, and promotional materials.
+    </p>
+
+    <div class="case-study-line"></div>
+</div>
+
+        <div class="case-study-blurb-group">
+
+    <p class="case-study-blurb">
+       VHS to MP4 is a tape conversion service, taking old memorabilia and turning it into easily accessable files on a USB stick. The goal for this client-driven project, was to create a cohesive brand identity, accomplished by creating a colour pallette that reflected the vintage, and almost pshychedlic era of VHS and cassettes, with a new modern spin. This inluded pairing a sans serif text with a pixalated retro font, and incorperating a black and white, high contrast editorial feel to the neon rainbow of the past. 
+			</p> <br>
+ <p class="case-study-blurb">
+       The client had prepared a logo of their own, which I included below. They wanted to incorperate the roll of tape feel on one side, and the modern play button on the other side, as seen in the stand alone icon I created for them. However, they found the brand would be most recognizable by a word mark, and when presented with a few options, were fond of the pixalted text in three brand colours, along with the play button shape inside of the O counter.
+    </p> <br>
+			<p class="case-study-blurb">
+       Once my newspaper design ad was a success, printed and run for 8 weeks in the <strong>London Free Press Saturday Edition</strong>, I recieved another call from the client, asking if I would help him design a static mockup for his business site, along with a web ad. Something that reflected his company, captivated and held the attention of his customer audience, and simutaniously, was <strong>Search Engine Optimized.</strong>
+    </p>
+</div>
+		
+
+    </section>
+
+
+    <!-- =================================================
+         1. LARGE HERO IMAGE
+    ================================================== -->
+
+    <div class="case-study-photo case-study-hero">
+        <img src="Images/Case_study_VHS/before after (1)@3x-100.jpg" alt="VHS to MP4 project hero">
+        
+    </div>
+
+
+    <!-- =================================================
+         2. SECOND LARGE FULL-WIDTH IMAGE
+    ================================================== -->
+
+    <div class="case-study-photo case-study-feature">
+       <img src="Images/Case_study_VHS/Print Ad@3x-100.jpg" alt="newspaper advertisement, posted in London Free Press">
+    </div>
+	 
+	<div class="case-study-photo case-study-feature">
+       <img src="Images/Case_study_VHS/vhs_News.jpg" alt="newspaper advertisement, posted in London Free Press">
+    </div>
+
+
+
+    <!-- =================================================
+         3. FOUR-IMAGE GRID
+    ================================================== -->
+<div class="case-study-grid-wrapper">
+    <div class="case-study-grid">
+
+        <div class="case-study-photo">
+             <img src="Images/Case_study_VHS/white coloured logo@3x-100.jpg" alt="VHS to MP4 logo variation 1, colour">
+        </div>
+
+        <div class="case-study-photo">
+           <img src="Images/Case_study_VHS/teal black logo@3x-100.jpg" alt="VHS to MP4 logo variation 2, black">
+        </div>
+
+        <div class="case-study-photo">
+           <img src="Images/Case_study_VHS/red icon logo@3x-100.jpg" alt="VHS to MP4 logo variation 3, red icon, no text">
+        </div>
+
+        <div class="case-study-photo">
+           <img src="Images/Case_study_VHS/black white logo@3x-100.jpg" alt="VHS to MP4 logo variation 5, white">
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         4. SINGLE FULL-WIDTH IMAGES
+    ================================================== -->
+
+    <div class="case-study-photo case-study-single">
+         <img src="Images/Case_study_VHS/VHS to MP4 AdMinimal.png" alt="advertisement for vhs to mp4">
+  
+    </div>
+<div class="case-study-grid-wrapper">
+   <div class="case-study-grid">
+
+    <div class="case-study-photo">
+        <img src="Images/Case_study_VHS/BusCardFront@3x-100.jpg" alt="Business card front side, with a Vhs tape design">
+    </div>
+
+    <div class="case-study-photo">
+        <img src="Images/Case_study_VHS/BusCardBack@3x-100.jpg" alt="Businesscard back, with a rainbow boarder">
+    </div>
+
+</div>
+	
+	<div class="case-study-photo case-study-web-1">
+    <img src="Images/Case_study_VHS/VHS_to_MP4_siteMockup1.jpg" alt="the front cover of a home web page mockup, with services and hero and introduction">
+</div>
+
+<div class="case-study-photo case-study-web-2">
+    <img src="Images/Case_study_VHS/VHS_to_MP4_siteMockup2.jpg" alt="the front cover of a home web page mockup, with pricing and about page">
+</div>
+
+
+<div class="case-study-photo case-study-web-3">
+    <img src="Images/Case_study_VHS/VHS_to_MP4_siteMockup3.jpg" alt="contact section of an about page website mockup, with a google maps insert and footer														">
+</div>
+</div>
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">HAILEY RICE</a>
+            <p>Hailey Rice / Graphic Designer</p>
+            <p>519-933-6061</p>
+            <p>
+                haileyrice9133@gmail.com<br>
+                H. Rice / Graphic Designer<br>
+                © Copyright 2026<br>
+                All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>PAGES</h3>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+     <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+    </div>
+
+    <div class="footer-credit">
+        Website designed and coded by Hailey Rice<br>
+        © Copyright 2026 Hailey Rice - All Rights Reserved
+    </div>
+
+</footer>
+
+</body>
+</html>

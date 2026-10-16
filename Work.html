@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work | Hailey Rice</title>
+<link rel="stylesheet" href="PortfolioCSS.css">
+
+<style>
+body.work-page { background:#212120; color:#fff; }
+.work-page main { background:#212120; }
+
+.work-hero {
+    padding:75px 0 55px;
+    text-align:center;
+}
+.work-hero h1 {
+    margin:0;
+    font-family:"TexGyreAdventor",Arial,sans-serif;
+    font-size:clamp(42px,6vw,78px);
+    line-height:.95;
+    font-weight:400;
+    font-style:normal;
+}
+.work-hero p {
+    max-width:650px;
+    margin:18px auto 0;
+    font-size:11px;
+    line-height:1.45;
+}
+
+.design-gallery {
+    width:88%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:10px 0 105px;
+}
+.gallery-heading,
+.photo-heading {
+    margin:0 0 35px;
+    text-align:center;
+    font-family:"TexGyreAdventor",Arial,sans-serif;
+    font-size:clamp(24px,3vw,38px);
+    line-height:1;
+    font-weight:400;
+    font-style:normal;
+}
+.design-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+.design-card {
+    position:relative;
+    display:block;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.28);
+    color:#fff;
+}
+.design-placeholder {
+    position:absolute;
+    inset:0;
+    background:#fff;
+	}
+	.design-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* fills the square */
+    object-position: center; /* keeps the crop centered */
+    display: block;
+}
+.design-overlay,
+.photo-overlay {
+    position:absolute;
+    inset:0;
+    background:rgba(33,33,32,.86);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:28px;
+    opacity:0;
+    transition:opacity .3s ease;
+}
+.design-card:hover .design-overlay,
+.design-card:focus .design-overlay,
+.photo-card:hover .photo-overlay,
+.photo-card:focus .photo-overlay {
+    opacity:1;
+}
+.design-overlay strong,
+.photo-overlay strong {
+    font-family:"TexGyreAdventor",Arial,sans-serif;
+    font-size:15px;
+    line-height:1.1;
+    font-weight:700;
+    margin-bottom:8px;
+}
+.design-overlay em,
+.photo-overlay em {
+    max-width:420px;
+    font-family:"TexGyreAdventor",Arial,sans-serif;
+    font-size:10px;
+    line-height:1.4;
+    font-style:italic;
+}
+
+.photo-gallery {
+    background:#212120;
+    padding:0 0 110px;
+}
+.photo-gallery-inner {
+    width:88%;
+    max-width:1200px;
+    margin:0 auto;
+}
+.photo-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+.photo-card {
+    position:relative;
+    aspect-ratio:1.55/1;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,.28);
+}
+
+@media (max-width:800px) {
+    .design-grid { grid-template-columns:repeat(2,1fr); gap:18px; }
+    .photo-grid { grid-template-columns:1fr; gap:18px; }
+}
+@media (max-width:550px) {
+    .work-hero { padding-top:55px; }
+    .design-grid { gap:12px; }
+    .design-overlay,.photo-overlay { padding:15px; }
+    .design-overlay strong,.photo-overlay strong { font-size:11px; }
+    .design-overlay em,.photo-overlay em { font-size:8px; }
+}
+</style>
+</head>
+
+<body class="work-page">
+
+<header class="site-header">
+    <a href="index.html" class="logo">HAILEY RICE</a>
+    <div class="header-right">
+        <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="work-hero">
+    <div class="content-width">
+        <h1>WORK GALLERY</h1>
+        <p>A regularly updated selection of graphic design, branding, visual identity, and photographic work.</p>
+    </div>
+</section>
+
+<section class="design-gallery">
+    <h2 class="gallery-heading">GRAPHIC DESIGN</h2>
+
+    <div class="design-grid">
+
+        <a href="CaseStudy1.html" class="design-card" target="_blank" rel="noopener noreferrer">
+            <div class="design-placeholder"><img src="Images/Case_study_VHS/VHS_CaseCover_Mockup.jpg" alt="case study depicting a web mockup and business cards along with various assets"></div>
+            <div class="design-overlay"><strong>CASE STUDY ONE</strong><em>VHS to MP4 — Branding, visual identity, concept development, and promotional materials.</em></div>
+        </a>
+
+       <a href="CaseStudy2.html" class="project-card">
+
+    <div class="project-placeholder">
+        <img 
+            src="Images/CaseStudy2_WhiteRabbit/Signage_WhiteRabbit.jpg"
+            alt="White Rabbit Tea branding case study"
+        >
+    </div>
+
+    <div class="project-overlay">
+        <strong>CASE STUDY 2</strong>
+        <em>White Rabbit Tea — Brand identity, composition, and product packaging</em>
+    </div>
+
+</a>
+
+        <a href="CaseStudy3.html" class="design-card" target="_blank" rel="noopener noreferrer">
+            <div class="project-placeholder">
+        <img 
+            src="Images/CaseStudy3_Wholegrain/Wholegrain_businessCard.jpg"
+            alt="White Rabbit Tea branding case study"
+        >
+    </div>
+            <div class="design-overlay"><strong>CASE STUDY THREE</strong><em>Wholegrain Emporium — branding, packaging, and social and storefront media assets.</em></div>
+        </a>
+
+        <a href="CaseStudy4.html" class="design-card" target="_blank" rel="noopener noreferrer">
+            <div class="project-placeholder">
+        <img 
+            src="Images/Case_Study4_Grooveline/Grooveline_Cover_casestudy.jpg"
+            alt="Grooveline App and storefront case study"
+        >
+    </div>
+            <div class="design-overlay"><strong>CASE STUDY FOUR</strong><em>GrooveLine Records — Brand Identity, UI/UX Design, Mobile App Design, Advertising Campaign, Social Media and Retail Marketing.</em></div>
+        </a>
+
+       
+
+    </div>
+</section>
+
+<section class="photo-gallery">
+    <div class="photo-gallery-inner">
+        <h2 class="photo-heading">PHOTOGRAPHY</h2>
+
+        <div class="photo-grid">
+
+            <div class="photo-card">
+                <div class="photo-placeholder"><img 
+            src="Images/WoodCabin.jpg"
+            alt="Photo of a ranger's office on a sunny day."
+        ></div>
+                <div class="photo-overlay"><strong>RANGER'S OFFICE</strong><em>Colour editing and visual composition, environmental photography. Taken on a sunny summer day in Six Mile Lake Provincial Park, with lush green trees and hints of a blue sky above.</em></div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder"><img 
+            src="Images/Sailboatsbeach.jpg"
+            alt="Photo of a shady beach in late afternoon."
+        ></div>
+                <div class="photo-overlay"><strong>IRIDESCENT SAILBOATS</strong><em>Colour enhancement and environmental photography. Shot in the late afternoon shade of a private beach dwelling, with sailboats anchored before a sandbar. The fading sunlight and pale sky reflecting on the surface gives an almost magical impression of irridescence and stardust.</em></div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder"><img 
+            src="Images/Apples.jpg"
+            alt="Photo of a tall apple tree with red apples against a blue sky."
+        ></div>
+                <div class="photo-overlay"><strong>MCINTOSH TREE</strong><em>Composition, colour grading, and photographic study. A apple tall tree in a local orchard strikes red hot contrast against a bright blue sky with lignering cloud cover. A beautiful day for a beautfiful photo.</em></div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-placeholder"><img 
+            src="Images/PortPierMatt-Recovered.jpg"
+            alt="Photo of a young man before a starting sunset and a pier."
+        ></div>
+                <div class="photo-overlay"><strong>PHOTO OF MATTHEW</strong><em>Impromptu portrait shot, photography focused on atmosphere, and composition. Matthew was retouched to his natural perfection before a sunset graded sunset over the Port Stanley pier. </em></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">HAILEY RICE</a>
+            <p>
+                Hailey Rice / Graphic Designer<br>
+                H. Rice / Graphic Designer<br>
+                © Copyright 2026<br>
+                Hailey Rice<br>
+                All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>PAGES</h3>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+       <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Case Study 3 | Hailey Rice</title>
+
+<link rel="stylesheet" href="PortfolioCSS.css">
+
+<style>
+/* =====================================================
+   CASE STUDY PAGE
+===================================================== */
+
+.case-study-page {
+    background: var(--light-grey);
+    color: var(--charcoal);
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+}
+
+.case-study-page .main-nav a {
+    color: #ffffff;
+}
+
+.case-study-page .main-nav a:hover {
+    color: var(--pink);
+}
+
+/* PAGE WRAPPER */
+.case-study-wrapper {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 105px;
+    padding-bottom: 20px;
+}
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.case-study-intro {
+    max-width: 900px;
+    margin: 0 auto 48px auto;
+    display: grid;
+    grid-template-columns: 32% 58%;
+    column-gap: 10%;
+    align-items: start;
+}
+
+.case-study-title {
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    white-space: nowrap;
+}
+
+.case-study-subtitle {
+    font-size: clamp(16px, 2.2vw, 22px);
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 14px;
+}
+
+.case-study-line {
+    width: 100%;
+    max-width: 350px;
+    height: 6px;
+    background: var(--pink);
+    margin-bottom: 22px;
+}
+
+.case-study-blurb {
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+/* =====================================================
+   IMAGE PLACEHOLDERS
+===================================================== */
+
+.case-study-photo {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 22px auto;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HERO */
+.case-study-hero {
+    aspect-ratio: 1.29 / 1;
+}
+
+/* CAROUSEL — FULL WIDTH */
+.case-study-feature {
+    aspect-ratio: 5 / 1;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* GRID OF 4 LOGOS — SQUARE */
+.case-study-grid-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.case-study-grid .case-study-photo {
+    aspect-ratio: 1 / 1;
+}
+
+/* BUSINESS CARD */
+.case-study-single {
+    aspect-ratio: 0.90 / 1;
+}
+
+/* TYPOGRAPHY BREAKDOWN */
+.case-study-breakdown {
+    aspect-ratio: 1.29 / 1;
+}
+
+/* PACKAGING ROW — 3 IMAGES */
+.case-study-row-3 {
+    max-width: 900px;
+    margin: 0 auto 22px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* BOX + BOOK COVER — SIDE BY SIDE */
+.case-study-row-2 {
+    max-width: 900px;
+    margin: 0 auto 22px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Vertical images (proportional sizing) */
+.case-study-vertical-small {
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    max-width: 100%;
+}
+	.case-study-breakdown {
+    aspect-ratio: 1.29 / 1 !important;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+    .case-study-intro {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body class="case-study-page">
+
+<header class="site-header">
+    <a href="index.html" class="logo">HAILEY RICE</a>
+
+    <div class="header-right">
+       <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
+</header>
+
+<main class="case-study-wrapper">
+
+<section class="case-study-intro">
+
+    <div class="case-study-heading">
+        <h1 class="case-study-title">WHOLEGRAIN</h1>
+        <h1 class="case-study-title">EMPORIUM</h1>
+        <p class="case-study-subtitle">Brand identity, composition, and product packaging.</p>
+        <div class="case-study-line"></div>
+    </div>
+
+    <div class="case-study-blurb-group">
+        <p class="case-study-blurb">
+           Wholegrain Emporium is an independent creative studio brand focused on producing collectible miniature artworks, illustrated prints, and commissioned digital pieces. The identity is designed to function cohesively across physical goods and online platforms, creating a scalable and recognizable creative 
+			presence. </p> 
+		 <p class="case-study-blurb">
+	 The name originated as a play on my last name, Rice, and evolved into a broader concept representing complete, unrefined, and authentic creative expression. “Wholegrain” suggests naturalness and substance, reflected in my painterly style and handcrafted approach to content creation. Below I've attached a branding carousel, along with logo varients and business cards.
+
+
+        </p>
+
+        <p class="case-study-blurb">
+            
+       For the logo and word mark, i went with a traditional serif font, of Goudy Oldstyle Bold, and then added an accent of Alana Regular. I wanted my workmark to have some flare, so I had to decide which letter would get redesigned. I decided to loop the E around the G with negative white space, then elongated the H to nearly the descender height of the bread surrounding the W, which was lengthened to meet the baseline. 
+        </p>
+
+        <p class="case-study-blurb">
+           
+      The target audience includes independent art collectors and individuals who value artisan, character-driven creative goods. To appeal to this audience, the brand identity draws from traditional watermarks and vintage print aesthetics, incorporating classic serif typography, a jewel-toned palette centered on burgundy and black, and a stylized bread motif, symbolizing warmth and craftsmanship.
+        </p>
+    </div>
+
+</section>
+
+<!-- HERO -->
+<div class="case-study-photo case-study-hero">
+    <img src="Images/CaseStudy3_Wholegrain/Rationale@3x.png" alt="">
+</div>
+
+<!-- CAROUSEL -->
+<div class="case-study-photo case-study-feature">
+    <img src="Images/CaseStudy3_Wholegrain/BrandCarousel@3x.png" alt="">
+</div>
+	<div class="case-study-photo case-study-feature">
+    <img src="Images/CaseStudy3_Wholegrain/colours@3x.png" alt="">
+</div>
+
+<!-- LOGO GRID -->
+<div class="case-study-grid-wrapper">
+    <div class="case-study-grid">
+        <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/Cream_Logo@3x.png" alt=""></div>
+        <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/Brown_word@3x-100.jpg" alt=""></div>
+        <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/Red_logo@3x.png" alt=""></div>
+        <div class="case-study-photo"><img src="Images/logos_WHOLEGRAIN.jpg" alt=""></div>
+    </div>
+</div>
+
+<!-- BUSINESS CARD -->
+<div class="case-study-photo case-study-single">
+    <img src="Images/CaseStudy3_Wholegrain/Wholegrain_businessCard.jpg" alt="A business card photographed nicely">
+</div>
+
+<!-- TYPOGRAPHY BREAKDOWN -->
+<div class="case-study-grid-wrapper">
+    <div class="case-study-grid">
+        <div class="case-study-photo case-study-breakdown">
+            <img src="Images/CaseStudy3_Wholegrain/typog_word@3x.png" alt="">
+        </div>
+        <div class="case-study-photo case-study-breakdown">
+            <img src="Images/CaseStudy3_Wholegrain/typorg_logo@3x.png" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- PACKAGING ROW (3 IMAGES) -->
+<div class="case-study-row-3">
+    <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/Packaged1.jpg" alt=""></div>
+    <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/redLetters.jpg" alt=""></div>
+    <div class="case-study-photo"><img src="Images/CaseStudy3_Wholegrain/packaged2.jpg" alt=""></div>
+</div>
+
+<!-- BOX + BOOK COVER (SIDE BY SIDE, PROPORTIONAL) -->
+<div class="case-study-row-2">
+
+    <div class="case-study-photo case-study-vertical-small" style="--ratio: 0.70 / 1;">
+        <img src="Images/CaseStudy3_Wholegrain/Wholegrain_Box.jpg" alt="">
+    </div>
+
+    <div class="case-study-photo case-study-vertical-small" style="--ratio: 0.63 / 1;">
+        <img src="Images/CaseStudy3_Wholegrain/fledged cover JPEG.jpg" alt="">
+    </div>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <a href="index.html" class="logo">HAILEY RICE</a>
+            <p>Hailey Rice / Graphic Designer</p>
+            <p>519-933-6061</p>
+            <p>haileyrice9133@gmail.com<br>© Copyright 2026</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>PAGES</h3>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>SOCIAL</h3>
+         <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+
+    <div class="footer-credit">
+        Website designed and coded by Hailey Rice<br>© 2026 All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>

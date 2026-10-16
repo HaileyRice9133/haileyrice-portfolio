@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Case Study 4 | Hailey Rice</title>
+
+<link rel="stylesheet" href="PortfolioCSS.css">
+
+<style>
+
+/* =====================================================
+   CASE STUDY PAGE
+===================================================== */
+
+.case-study-page {
+    background: var(--light-grey);
+    color: var(--charcoal);
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+}
+
+/* Make the floating navigation text white on this page */
+.case-study-page .main-nav a {
+    color: #ffffff;
+}
+
+.case-study-page .main-nav a:hover {
+    color: var(--pink);
+}
+
+/* PAGE WRAPPER */
+.case-study-wrapper {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 105px;
+    padding-bottom: 20px;
+}
+
+/* =====================================================
+   INTRO: TITLE / RULE LEFT + DESCRIPTION RIGHT
+===================================================== */
+.case-study-intro {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-intro {
+    display: grid;
+    grid-template-columns: 32% 58%;
+    column-gap: 10%;
+    align-items: start;
+    margin-bottom: 48px;
+	
+}
+
+.case-study-heading {
+    padding-top: 2px;
+}
+
+.case-study-title {
+    font-size: clamp(32px, 5vw, 54px);;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.05;
+    margin: 0 0 22px;
+    text-align: left;
+	 white-space: nowrap;
+}
+	.case-study-subtitle {
+    font-size: clamp(16px, 2.2vw, 22px); /* smaller but still noticeable */
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 14px;
+    color: var(--charcoal);
+}
+
+.case-study-line {
+    width: 100%; /* full width of the title column */
+    max-width: 350px; /* same vibe as ABOUT page */
+    height: 6px;
+    background: var(--pink);
+    margin: 0 0 22px;
+}
+
+.case-study-blurb {
+     max-width: none;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6; /* increased spacing */
+    text-align: left;
+}
+
+/* =====================================================
+   IMAGE PLACEHOLDERS
+   White boxes with the same soft drop-shadow treatment
+===================================================== */
+	/* CAROUSEL — FULL WIDTH */
+.case-study-feature {
+    aspect-ratio: 1.2/1;
+    max-width: 900px;
+    width: 100%;
+}
+	.case-study-palette {
+    aspect-ratio: 4 / 1;
+    max-width: 900px;
+    margin-bottom: 22px;
+}
+		/* GRID OF 4 LOGOS — SQUARE */
+.case-study-grid-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.case-study-grid .case-study-photo {
+    aspect-ratio: 1 / 1;
+}
+.case-study-photo {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-photo {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================================================
+   1. LARGE HERO MOCKUP
+===================================================== */
+
+.case-study-hero {
+    aspect-ratio: 1.5 / 1;
+    margin-bottom: 22px;
+}
+
+/* =====================================================
+   2. SECOND FULL-WIDTH MOCKUP
+===================================================== */
+
+.case-study-feature {
+    aspect-ratio: 2/1;
+    margin-bottom: 22px;
+}
+.case-study-print {
+    aspect-ratio: 8.5/11;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+}
+/* =====================================================
+   3. TWO-COLUMN GRID
+===================================================== */
+.case-study-grid-wrapper {
+    max-width: 900px; /* same as your other images */
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.case-study-grid .case-study-photo {
+    aspect-ratio: 1/ 1;
+}
+
+/* =====================================================
+   4. SINGLE FULL-WIDTH MOCKUPS
+===================================================== */
+
+.case-study-single {
+    aspect-ratio: 1.17 / 1;
+    margin-bottom: 22px;
+}
+	/* WEBSITE MOCKUP 1 — 1910 x 2489 */
+.case-study-web-1 {
+    aspect-ratio: 1.75 / 1;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* WEBSITE MOCKUP 2 — 1905 x 1801 */
+.case-study-web-2 {
+    aspect-ratio: 1.06 / 1;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* WEBSITE MOCKUP 3 — 1897 x 1796 */
+.case-study-web-3 {
+    aspect-ratio: 1.06 / 1; /* same ratio as mockup 2 */
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    margin-bottom: 22px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-single:last-child {
+    margin-bottom: 0;
+}
+
+/* FOOTER SPACING */
+.site-footer {
+    margin-top: 65px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .case-study-wrapper {
+        width: 92%;
+        padding-top: 90px;
+    }
+
+    .case-study-intro {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .case-study-title {
+        font-size: 26px;
+		 white-space: nowrap;
+    }
+
+    .case-study-blurb {
+       max-width: none;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6; /* increased spacing */
+    text-align: left;
+}
+
+    .case-study-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-grid .case-study-photo {
+        aspect-ratio: 1.48 / 1;
+    }
+}
+
+</style>
+</head>
+
+<body class="case-study-page">
+
+<!-- =====================================================
+     HEADER / FLOATING NAV
+===================================================== -->
+
+<header class="site-header">
+    <a href="index.html" class="logo">HAILEY RICE</a>
+
+    <div class="header-right">
+
+        <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =====================================================
+     CASE STUDY CONTENT
+===================================================== -->
+
+<main class="case-study-wrapper">
+
+    <!-- TITLE + DESCRIPTION -->
+    <section class="case-study-intro">
+
+        <div class="case-study-heading">
+          <h1 class="case-study-title">GROOVELINE&nbsp;</h1>
+          <h1 class="case-study-title">RECORDS&nbsp;</h1>
+<p class="case-study-subtitle">
+       Brand Identity, UI/UX Design, Mobile App Design, Advertising Campaign, Social Media and Retail Marketing.
+    </p>
+
+    <div class="case-study-line"></div>
+</div>
+
+        <div class="case-study-blurb-group">
+
+    <p class="case-study-blurb">
+       Grooveline Records is a retail store and music discovery app that brings the record-store experience into the digital space. Users can shop new and pre-loved vinyl, receive personalized recommendations, track album availability, play purchased digital downloads, and sell qualifying records through the store. Designed for music lovers and collectors, Grooveline connects the thrill of finding a record in-store with the convenience of discovering and collecting music online. 
+		  </p> <br>
+ <p class="case-study-blurb">
+       When designing the main wordmark for Grooveline, I chose a font that had ample space inside the counters of the O's to place records, and had a visual baseline -- no pun intended -- to keep things cohesive. The curve of the L also represents the stem and flag of a music note. I then came up with a much smaller mark of simple initials, along with the record shaped motif that would work well for a badge or an app.
+    </p> <br>
+			<p class="case-study-blurb">
+     The colour palette was chosen to create an energetic and vibrant visual identity that reflects a modern take on vinyl culture. By combining the nostalgia of record collecting with the accessibility of a music discovery app, the brand bridges the gap between traditional and digital music experiences. The bright, electric tones reinforce a sense of community and exploration, helping position the retail store as both a shopping destination and a social hub for younger audiences. This approach creates a fresh and engaging brand that resonates with longtime collectors while introducing a new generation to the world of vinyl. </p>
+</div>
+		
+
+    </section>
+
+
+    <!-- =================================================
+         1. LARGE HERO IMAGE
+    ================================================== -->
+
+    <div class="case-study-photo case-study-hero">
+        <img src="Images/Case_Study4_Grooveline/PhoneAd.jpg" alt="VHS to MP4 project hero">
+        
+    </div>
+
+
+    <!-- =================================================
+         2. SECOND LARGE FULL-WIDTH IMAGE
+    ================================================== -->
+
+   <div class="case-study-photo case-study-palette">
+    <img src="Images/Case_Study4_Grooveline/colourpalette@3x.png" alt="">
+</div>
+	 
+	<div class="case-study-photo case-study-print">
+       <img src="Images/Case_Study4_Grooveline/PrintAd_HaileyRice.jpg" alt="newspaper advertisement, posted in London Free Press">
+    </div>
+
+
+
+    <!-- =================================================
+         3. FOUR-IMAGE GRID
+    ================================================== -->
+<!-- LOGO GRID -->
+<div class="case-study-grid-wrapper">
+    <div class="case-study-grid">
+        <div class="case-study-photo"><img src="Images/Case_Study4_Grooveline/Teal_Ad.jpg" alt=""></div>
+        <div class="case-study-photo"><img src="Images/Case_Study4_Grooveline/Coral_Ad@3x.jpg" alt=""></div>
+        <div class="case-study-photo"><img src="Images/Case_Study4_Grooveline/1_logo@3x.png" alt=""></div>
+        <div class="case-study-photo"><img src="Images/Case_Study4_Grooveline/3_logo@3x.png" alt=""></div>
+    </div>
+</div>
+
+
+    <!-- =================================================
+         4. SINGLE FULL-WIDTH IMAGES
+    ================================================== -->
+
+    <div class="case-study-photo case-study-single">
+         <img src="Images/Case_Study4_Grooveline/GroovelineBusinessCard1.jpg" alt="advertisement for vhs to mp4">
+  
+    </div>
+<div class="case-study-grid-wrapper">
+   <div class="case-study-grid">
+
+    <div class="case-study-photo">
+        <img src="Images/Case_Study4_Grooveline/2_logo@3x.png" alt="Business card front side, with a Vhs tape design">
+    </div>
+
+    <div class="case-study-photo">
+        <img src="Images/Case_Study4_Grooveline/4_logo@3x.png" alt="Businesscard back, with a rainbow boarder">
+    </div>
+
+</div>
+	
+	<div class="case-study-photo case-study-web-1">
+    <img src="Images/Case_Study4_Grooveline/GroovelineBusinesscard2.jpg" alt="the front cover of a home web page mockup, with services and hero and introduction">
+</div>
+
+<div class="case-study-photo case-study-web-2">
+    <img src="Images/Case_Study4_Grooveline/RecordSleeve.jpg" alt="the front cover of a home web page mockup, with pricing and about page">
+</div>
+
+
+</div>
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">HAILEY RICE</a>
+            <p>Hailey Rice / Graphic Designer</p>
+            <p>519-933-6061</p>
+            <p>
+                haileyrice9133@gmail.com<br>
+                H. Rice / Graphic Designer<br>
+                © Copyright 2026<br>
+                All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>PAGES</h3>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+       <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+    </div>
+
+    <div class="footer-credit">
+        Website designed and coded by Hailey Rice<br>
+        © Copyright 2026 Hailey Rice - All Rights Reserved
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Hailey Rice</title>
+
+    <link rel="stylesheet" href="PortfolioCSS.css">
+
+    <!-- CONTACT PAGE ONLY -->
+    <style>
+        body.contact-page {
+            background: #212120;
+            color: #ffffff;
+        }
+
+        .contact-page .site-header {
+            position: relative;
+            z-index: 1001;
+            background: #212120;
+        }
+
+        .contact-page .site-header .logo {
+            color: #FF0040;
+			font-size: 35px;
+        }
+
+        .contact-page .social-icons,
+        .contact-page .social-icons a {
+            color: #ffffff;
+        }
+
+        /* FOOTER LOGO FIX */
+        .contact-page .site-footer .logo {
+            color: #FF0040;
+        }
+
+        /* ================================
+           CONTACT HERO
+        ================================= */
+
+        .contact-hero {
+			padding-top: 150px;
+            background:
+                linear-gradient(
+                    to bottom,
+                    #212120 0%,
+                    #212120 8%,
+                    #FF0040 38%,
+                    #FF0040 100%
+                );
+            padding: 20px 0 70px;
+        }
+
+        .contact-hero-image {
+            width: 88%;
+            max-width: 1200px;
+            margin: 0 auto 65px;
+            overflow: hidden;
+        }
+
+        .contact-hero-image img {
+            width: 100%;
+            aspect-ratio: 2.05 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact-hero-inner {
+            width: 88%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 48% 42%;
+            column-gap: 10%;
+            align-items: center;
+        }
+
+        .contact-hero-copy h1 {
+            margin: 0;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: clamp(44px, 5.5vw, 78px);
+            line-height: 0.9;
+            font-weight: 800;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .contact-hero-copy .contact-intro {
+            margin: 26px 0 0;
+            max-width: 520px;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .contact-form label {
+            position: relative;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .contact-form label span {
+            position: absolute;
+            top: 9px;
+            left: 10px;
+            z-index: 2;
+            margin: 0;
+            color: #000000;
+            font-size: 9px;
+            font-style: italic;
+            pointer-events: none;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            border: 1px solid #212120;
+            background: rgba(255,255,255,0.55);
+            color: #000000;
+            padding: 12px 10px;
+            outline: none;
+        }
+
+        .contact-form input {
+            height: 42px;
+        }
+
+        .contact-form textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: rgba(255,255,255,0.72);
+        }
+
+        .contact-form .submit-button {
+            display: block;
+            margin: 18px 0 0 auto;
+            border: 1px solid #212120;
+            background: #212120;
+            color: #ffffff;
+            padding: 12px 35px;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: 9px;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .contact-form .submit-button:hover {
+            background: #ffffff;
+            color: #212120;
+        }
+
+        /* ================================
+           CONTACT INFORMATION + FAQ
+        ================================= */
+
+        .contact-lower {
+            position: relative;
+            background:
+                linear-gradient(
+                    to bottom,
+                    #FF0040 0%,
+                    #d81246 16%,
+                    #212120 62%,
+                    #212120 100%
+                );
+            padding: 55px 0 110px;
+        }
+
+        .contact-lower-inner {
+            width: 88%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 48% 42%;
+            column-gap: 10%;
+        }
+
+        .contact-details h2,
+        .faq-section h2 {
+            margin: 0 0 25px;
+            font-size: clamp(24px, 3vw, 38px);
+            line-height: 1;
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        .contact-details strong {
+            display: block;
+            margin-top: 22px;
+            font-size: 12px;
+        }
+
+        .contact-details p {
+            margin: 5px 0 0;
+            font-size: 11px;
+            line-height: 1.45;
+        }
+
+        .contact-details a {
+            color: #ffffff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ================================
+           FAQ — FIRST VERSION TEXT
+        ================================= */
+
+        .faq-section details {
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .faq-section details:last-child {
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .faq-section summary {
+            padding: 15px 0;
+            cursor: pointer;
+            list-style: none;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .faq-section summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-section summary::after {
+            content: "+";
+            float: right;
+            color: #FF0040;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .faq-section details[open] summary::after {
+            content: "−";
+        }
+
+        .faq-section details p {
+            margin: 0 0 16px;
+            max-width: 550px;
+            font-size: 10px;
+            line-height: 1.5;
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 800px) {
+
+            .contact-hero {
+                padding: 10px 0 55px;
+            }
+
+            .contact-hero-image {
+                width: 92%;
+                margin-bottom: 45px;
+            }
+
+            .contact-hero-inner,
+            .contact-lower-inner {
+                grid-template-columns: 1fr;
+                row-gap: 55px;
+            }
+
+            .contact-hero-copy h1 {
+                font-size: clamp(48px, 13vw, 78px);
+            }
+
+            .contact-lower {
+                padding: 75px 0 85px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="contact-page">
+
+<header class="site-header">
+
+    <a href="index.html" class="logo">HAILEY RICE</a>
+<div class="header-right">
+     <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+
+        <nav class="main-nav">
+            <a href="index.html">HOME</a>
+            <a href="work.html">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="contact-hero">
+
+    <div class="contact-hero-image">
+        <img src="Images/Silo.jpg" alt="Hailey Rice portfolio hero image">
+    </div>
+
+    <div class="contact-hero-inner">
+
+        <div class="contact-hero-copy">
+            <h1>CAN'T WAIT TO<br>WORK WITH YOU!</h1>
+
+            <p class="contact-intro">
+              Have a project in mind, want to discuss a job opportunity,
+                or simply want to get in touch? I'd love to hear from you.
+          </p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+
+            <label>
+                <span>NAME</span>
+                <input type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+                <span>EMAIL</span>
+                <input type="email" name="email" autocomplete="email" required>
+            </label>
+
+            <label>
+                <span>SUBJECT</span>
+                <input type="text" name="subject">
+            </label>
+
+            <label>
+                <span>MESSAGE</span>
+                <textarea name="message" required></textarea>
+            </label>
+
+            <button type="submit" class="submit-button">SUBMIT</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<section class="contact-lower">
+
+    <div class="contact-lower-inner">
+
+        <!-- CONTACT DETAILS -->
+        <div class="contact-details">
+
+            <h2>FIND MY ART</h2>
+
+            <strong>eBay Storefront</strong>
+            <p>
+                Acrylic &amp; Watercolor, Oil Pastel,<br>
+                Portraits, Original/Print<br>
+                Collectable Art Cards, &amp; Commissions
+            </p>
+
+            <p>
+                <a href="https://www.ebay.ca/usr/wholegrain_emporium" target="_blank" rel="noopener noreferrer">
+                    https://www.ebay.ca/usr/wholegrain_emporium
+                </a>
+            </p>
+
+            <strong>H. Wholegrain</strong>
+            <p>
+                Art &amp; Creative Writing Commissions, Ecommerce<br>
+                KDP Authoring, Digital Persona
+            </p>
+
+            <p>
+                <a href="mailto:wholegrainz.art@gmail.com">
+                    wholegrainz.art@gmail.com
+                </a>
+				<br>
+				<a href="https://ko-fi.com/wholegrainz/commissions" target="_blank" rel="noopener noreferrer">
+                    https://ko-fi.com/wholegrainz
+                </a>
+            </p>
+
+        </div>
+
+        <!-- FAQ — FIRST VERSION TEXT -->
+        <div class="faq-section">
+
+            <h2>FAQ</h2>
+
+            <details>
+                <summary>Do you understand accessibility and inclusive design?</summary>
+                <p>
+                    Yes, I understand the importance of including alternate text for photos and web designs to ensure that all users can access my work barrier free.
+                </p>
+            </details>
+
+            <details>
+                <summary>Do you know how to receive successful printing results?</summary>
+                <p>
+                    Yes. I understand the importance of setting up the document correctly from the start, and the process of using bleeds and crop marks. I am also familiar with printing on a variety of mediums with differing absorbencies, including newspaper.
+                </p>
+            </details>
+
+            <details>
+                <summary>Are you familiar with Adobe's AI services?</summary>
+                <p>
+                    Yes, as a Graphic Designer in an evolving market, I am familiar with and able to utilize AI when necessary, though DO NOT rely on it alone. I have creativity for that!
+                </p>
+                <p>
+                    While AI is a tool that can quicken a project's finish line — like removing backgrounds in Adobe Photoshop — it is important to understand how to use design tools both with and without it. This includes Adobe Firefly.
+                </p>
+            </details>
+
+            <details>
+                <summary>How does your experience with fine art transfer to graphic design?</summary>
+                <p>
+                    Fine art has sharpened my eye to recognize colours, shapes, forms, and general hierarchy and harmony between graphics and their space. This meticulousness improves the integrity of my designs and successfully communicates with, and evokes feeling from, the viewer.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">HAILEY RICE</a>
+            <p>
+                Hailey Rice / Graphic Designer<br>
+                H. Rice / Graphic Designer<br>
+                © Copyright 2026<br>
+                Hailey Rice<br>
+                All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>PAGES</h3>
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+       <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+ 
+    </div>
+ <div class="footer-credit">
+        Website designed and coded by Hailey Rice<br>
+        © Copyright 2026 Hailey Rice - All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>

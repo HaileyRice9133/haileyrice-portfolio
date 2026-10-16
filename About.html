@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | Hailey Rice</title>
+
+    <link rel="stylesheet" href="PortfolioCSS.css">
+
+    <style>
+        /* =====================================================
+           ABOUT PAGE
+        ===================================================== */
+
+        .about-page {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .about-page .site-header {
+            position: relative;
+            z-index: 1001;
+        }
+
+        .about-page .about-hero {
+            background: #FF0040;
+            padding: 48px 0 78px;
+        }
+
+        .about-page .about-title {
+            width: 88%;
+            max-width: 1200px;
+            margin: 0 auto 28px;
+            text-align: center;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1;
+            font-weight: 400;
+        }
+		
+	.about-page .site-header .logo {
+    font-size: 35px;
+    color: #FF0040; /* if you want pink here too */
+}
+
+        .about-page .about-main {
+            width: 88%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 48% 42%;
+            column-gap: 10%;
+            align-items: start;
+        }
+
+        /* Photo placeholders */
+        .about-page .about-photos {
+            position: relative;
+            min-height: 560px;
+        }
+
+        .about-page .about-photo {
+            position: absolute;
+            width: 56%;
+            aspect-ratio: 0.72 / 1;
+            background: #ffffff;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+        }
+
+        .about-page .about-photo-one {
+            top: 0;
+            left: 0;
+        }
+
+        .about-page .about-photo-two {
+            top: 125px;
+            right: 0;
+        }
+		.about-photos {
+    padding-bottom: 100px; /* adjust as needed */
+}
+		.about-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* fills the frame */
+    object-position: center; /* centers the crop */
+    display: block;
+			
+}
+        .about-page .about-copy {
+            min-height: 470px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 63px;
+        }
+
+        .about-page .about-copy h2 {
+            margin: 0 0 45px;
+            max-width: 560px;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: clamp(22px, 3vw, 35px);
+            line-height: 1.03;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .about-page .about-copy p {
+            margin: 0 0 22px;
+            max-width: 560px;
+            font-size: 12px;
+            line-height: 1.35;
+        }
+
+        .about-page .about-copy .dark-button {
+            align-self: flex-end;
+            margin-top: 15px;
+            border: 1px solid #000000;
+            background: transparent;
+            color: #fff;
+            padding: 10px 30px;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: 9px;
+            font-style: italic;
+            font-weight: 800;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .about-page .about-copy .dark-button:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+.about-intro-banner {
+    background: var(--light-grey);
+    padding: 55px 0;
+    text-align: center;
+}
+
+.about-banner-title {
+    margin: 0;
+    font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+    font-size: clamp(25px, 5vw, 0px); /* matches your ABOUT header */
+    font-style: italic;
+    font-weight: 400;
+    color: var(--charcoal);
+}
+		.quote-author {
+    font-weight: 400;      /* removes bold */
+    font-style: italic;    /* keeps italic */
+    display: inline-block;
+    margin-left: 6px;      /* spacing */
+    color: var(--charcoal);
+}
+        /* =====================================================
+           SKILLS / SPECIALIZATION
+        ===================================================== */
+
+        .about-page .skills-section {
+            background: #212120;
+            padding: 82px 0 105px;
+        }
+
+        .about-page .skills-grid {
+            width: 82%;
+            max-width: 1150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 13%;
+        }
+
+        .about-page .skills-column h3 {
+            margin: 0 0 9px;
+            font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+            font-size: clamp(22px, 3vw, 31px);
+            line-height: 1;
+            font-style: italic;
+            font-weight: 800;
+        }
+
+        .about-page .skills-rule {
+            width: 85%;
+            height: 6px;
+            background: #FF0040;
+            margin-bottom: 32px;
+        }
+
+        .about-page .skills-column ul {
+            margin: 0;
+            padding-left: 23px;
+        }
+
+        .about-page .skills-column li {
+            margin-bottom: 3px;
+            font-size: 18px;
+            line-height: 1.12;
+        }
+
+        .about-page .skills-group {
+            margin-bottom: 45px;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .about-page .about-hero {
+                padding: 40px 0 65px;
+            }
+
+            .about-page .about-main {
+                grid-template-columns: 1fr;
+                row-gap: 45px;
+            }
+
+            .about-page .about-photos {
+                min-height: 430px;
+                width: 85%;
+                margin: 0 auto;
+            }
+
+            .about-page .about-copy {
+                min-height: auto;
+                padding-top: 0;
+            }
+
+            .about-page .about-copy .dark-button {
+                align-self: flex-start;
+            }
+
+            .about-page .skills-grid {
+                width: 88%;
+                grid-template-columns: 1fr;
+                row-gap: 65px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .about-page .about-photos {
+                min-height: 350px;
+            }
+
+            .about-page .about-photo-two {
+                top: 95px;
+            }
+
+            .about-page .skills-column li {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="about-page">
+
+
+<!-- =====================================================
+     HEADER / NAVIGATION
+===================================================== -->
+
+<header class="site-header">
+
+    <a href="index.html" class="logo">
+        HAILEY RICE
+    </a>
+<div class="header-right">
+     <div class="social-icons">
+
+    <a href="mailto:haileyrice9133@gmail.com" aria-label="Email">
+        <img src="Icons/Email.png" alt="Email">
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+        <img src="Icons/Linkin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Ko-fi"
+       class="icon-kofi">
+        <img src="Icons/kofi.png" alt="Ko-fi">
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Behance"
+       class="icon-behance">
+        <img src="Icons/behance.png" alt="Behance">
+    </a>
+
+</div>
+
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="work.html">
+                WORK
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     ABOUT HERO
+===================================================== -->
+
+<section class="about-hero">
+
+    <h1 class="about-title">
+        ABOUT
+    </h1>
+
+
+    <div class="about-main">
+
+
+        <!-- PHOTO PLACEHOLDERS -->
+
+        <div class="about-photos">
+
+            <div class="about-photo about-photo-one">
+<img src="Images/mecamera.jpg" alt="About Photo" class="about-photo-img">
+            </div>
+
+            <div class="about-photo about-photo-two">
+               <img src="Images/photoMe.jpg" alt="About Photo" class="about-photo-img">
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT COPY -->
+
+        <div class="about-copy">
+
+            <h2>
+                AN ARTIST'S EYE,<br>
+                A DESIGNER'S PRECISION.
+            </h2>
+
+<p>Hi, I'm Hailey Rice, a graphic designer and artist from St. Thomas Ontario.</p>
+            <p>
+               As a meticulous and detail oriented multidisciplinary designer, I combine my knowledge of the arts with the necessary technical skills to create highly functional designs, websites, and illustrations. My work is consistantly driven by storytelling,  branding, colours, typography, and iconography that evokes emotion in the viewer, creating lasting association and a memorable identity.
+            </p>
+
+
+            <p>
+                Design has always been a passion of mine. At age fourteen, i started my first small business on Etsy selling hand-painted acrylic pet portraits on canvas, totebags, and phonecases. I learned about international shipping customs, along with the importance of designer to client communication skills. Now, with a plethora of creditble skills in graphic design -- and a set of certificates under my belt -- I am ready to create lasting, impactful designs that resonate with a variety of audiences.
+            </p>
+
+  <a href="HaileyRiceCV2026_GD.pdf"
+                    class="dark-button"
+				   download
+                >
+                VIEW RESUME
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS / SPECIALIZATION
+===================================================== -->
+
+  <section class="about-intro-banner">
+    <div class="content-width">
+     <h2 class="about-banner-title">
+    "It has been found that the less an advertisement looks like an advertisement 
+    and the more it looks like an editorial, the more readers stop, look, and read."
+    <span class="quote-author">– David Ogilvy</span>
+</h2>
+    </div>
+</section>
+	
+<section class="skills-section">
+
+    <div class="skills-grid">
+
+
+        <div class="skills-column">
+
+            <h3>
+                TECHNICAL SKILLS
+            </h3>
+
+            <div class="skills-rule"></div>
+
+
+            <div class="skills-group">
+
+                <ul>
+                    <li>Adobe Photoshop CC 2026</li>
+                    <li>Adobe Illustrator CC 2026</li>
+                    <li>Adobe InDesign CC 2026</li>
+					 <li>Adobe Dreamweaver CC 2026</li>
+                </ul>
+
+            </div>
+
+
+            <div class="skills-group">
+
+                <ul>
+               <li>Krita</li>
+                    <li>Adobe Lightroom </li>
+					<li>Adobe Custom Cloud Suite </li>
+                    <li>HTML 5 and CSS 3</li>
+					<li>Javascript</li>
+					<li>Capcut Video Editing</li>
+					<li>Blender 3D Modeling</li>
+					<li>Canva</li>
+					<li>Figma </li>
+					<li>Ecommerce, Shipping, Packaging, Tracking </li>
+					<li>Microsoft Office</li>
+					<li>Handdrawn/Painted Assets and Typography </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills-column">
+
+            <h3>
+                SPECIALIZATION
+            </h3>
+
+            <div class="skills-rule"></div>
+
+
+            <div class="skills-group">
+
+                <ul>
+                    <li>Photo and Video editing, <br>
+                    Colour-Grading, and Compositing.</li>
+                    <li>Social Media Branding/Content Creation.</li>
+                    <li>SEO, Marketing, Advertising</li>
+                </ul>
+
+            </div>
+
+
+            <div class="skills-group">
+
+                <ul>
+                    <li>Art Direction, Illustration, Brand Development and Asset Cultivation</li>
+                    <li>Press-Ready Printing with Crop Marks and Bleeds.</li>
+					<br>
+                    <li>Design Website Mockups, and Implent Into Functioning Code.</li>
+					<li>text Layouts for Newspapers, Magazines, and Spreads</li>
+					<br>
+					<li> Collaborate with Client to Acheive Final Product Goals.</li>
+					<li>Copywriting, Logo Design and Typography</li>
+					
+              </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                HAILEY RICE
+            </a>
+
+          <p> Hailey Rice / Graphic Designer</p>
+			<p>519-933-6061</p>
+            <p>haileyrice9133@gmail.com
+				<br>
+              H. Rice / Graphic Designer<br>
+              © Copyright 2026<br>
+              Hailey Rice<br>
+              All Rights Reserved </p>
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                PAGES
+            </h3>
+
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+       <!-- FOOTER SOCIAL -->
+<div class="footer-column">
+
+    <h3>
+        SOCIAL
+    </h3>
+
+    <a href="mailto:haileyrice9133@gmail.com">
+        Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/haileyrice"
+       target="_blank"
+       rel="noopener noreferrer">
+        LinkedIn
+    </a>
+
+    <a href="https://ko-fi.com/wholegrainz"
+       target="_blank"
+       rel="noopener noreferrer">
+        Ko-fi
+    </a>
+
+    <a href="https://www.behance.net/haileyrice3"
+       target="_blank"
+       rel="noopener noreferrer">
+        Behance
+    </a>
+
+</div>
+
+    </div>
+ <div class="footer-credit">
+        Website designed and coded by Hailey Rice<br>
+        © Copyright 2026 Hailey Rice - All Rights Reserved
+    </div>
+</footer>
+
+
+</body>
+</html>
