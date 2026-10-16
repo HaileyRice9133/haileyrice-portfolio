@@ -1,0 +1,1197 @@
+/* ===========================
+   CUSTOM FONTS
+   =========================== */
+
+@font-face {
+    font-family: "HeyNovember";
+    src: url("Fonts/HeyNovember-0WWlP.otf") format("opentype"),
+         url("Fonts/HeyNovember-eZZZI.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TexGyreAdventor";
+    src: url("Fonts/TexgyreadventorRegular-1meB.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TexGyreAdventor";
+    src: url("Fonts/TexgyreadventorBold-90Wn.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TexGyreAdventor";
+    src: url("Fonts/TexgyreadventorItalic-nEj0.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TexGyreAdventor";
+    src: url("Fonts/TexgyreadventorBoldItalic-lEj0.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ===========================
+   END CUSTOM FONTS
+   =========================== */
+
+@charset "utf-8";
+/* CSS Document */
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+    font-family: "TexGyreAdventor", Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.content-width {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   COLOUR VARIABLES
+===================================================== */
+
+:root {
+    --pink: #FF0040;
+    --light-grey: #D2D6D3;
+    --charcoal: #212120;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+    width: 88%;
+    max-width: 1200px;
+    min-height: 75px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.logo {
+    color: var(--pink);
+    font-family: "HeyNovember", cursive;
+    font-size: 35px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    /* Keeps the social icons sitting just to the
+       left of the fixed navigation */
+    padding-right: 175px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.social-icons a {
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    opacity: 0.6;
+	 color: var(--pink);
+}
+
+.social-icons img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.icon-behance img {
+    transform: scale(1.6);
+}
+
+.icon-kofi img {
+    transform: scale(1.5);
+}
+
+
+/* =====================================================
+   FLOATING NAVIGATION
+===================================================== */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #292929;
+    padding: 7px 12px;
+
+    position: fixed;
+    top: 20px;
+    right: 6%;
+
+    z-index: 1000;
+}
+
+.main-nav a {
+    font-size: 8px;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--pink);
+}
+
+
+/* Pink outline ONLY around CONTACT */
+
+.main-nav a:last-child {
+    border: 1px solid var(--pink);
+    padding: 3px 6px;
+}
+
+.main-nav a:last-child:hover {
+    color: var(--pink);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+    background: #000000;
+    padding: 20px 0 75px;
+}
+
+.hero-image {
+    width: 88%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    aspect-ratio: 2.05 / 1;
+    object-fit: cover;
+}
+
+
+/* Hero caption */
+
+.hero-caption {
+    position: absolute;
+
+    right: 4%;
+    bottom: 25%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 12px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+    line-height: 1.15;
+}
+
+.hero-caption strong {
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hero-caption span {
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   BRAND STATEMENT + CAROUSEL
+===================================================== */
+
+.brand-carousel-section {
+    background: var(--light-grey);
+    color: var(--charcoal);
+    padding: 55px 0 45px;
+    overflow: hidden;
+}
+
+.brand-statement {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto 28px;
+
+}
+.brand-title {
+    margin: 0;
+    max-width: none; /* ← THIS IS THE FIX */
+    font-size: clamp(22px, 3vw, 40px); /* bigger text */
+    line-height: 1.05;
+    font-style: italic;
+    font-weight: 800;
+    color: var(--charcoal);
+}
+
+.brand-title span {
+    display: inline;
+    color: var(--pink);
+}
+.pink {
+    white-space: nowrap;
+}
+
+
+
+/* =====================================================
+   CAROUSEL WINDOW
+===================================================== */
+
+.brand-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* =====================================================
+   CONTINUOUS MOVING TRACK
+===================================================== */
+
+.brand-track {
+    display: flex;
+    width: max-content;
+    animation: brand-scroll 45s linear infinite;
+}
+
+
+/* Each complete set has the same dimensions */
+
+.brand-set {
+    display: flex;
+    gap: 28px;
+    flex-shrink: 0;
+    padding-right: 28px;
+}
+
+
+/* Move exactly one complete set */
+
+@keyframes brand-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =====================================================
+   SOFT FADE AT CAROUSEL EDGES
+===================================================== */
+
+.brand-carousel::before,
+.brand-carousel::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 70px;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+}
+
+
+.brand-carousel::before {
+
+    left: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--light-grey),
+            rgba(210, 214, 211, 0)
+        );
+
+}
+
+
+.brand-carousel::after {
+
+    right: 0;
+
+    background:
+        linear-gradient(
+            to left,
+            var(--light-grey),
+            rgba(210, 214, 211, 0)
+        );
+
+}
+
+
+/* =====================================================
+   BRAND CARDS
+===================================================== */
+
+.brand-card {
+
+    width: 175px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+}
+
+
+.brand-card:hover {
+
+    transform:
+        translateY(-7px)
+        scale(1.04);
+
+}
+
+
+/* =====================================================
+   BRAND IMAGE PLACEHOLDER
+===================================================== */
+
+.brand-image {
+    width: 175px;
+    height: 175px;
+    background: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.brand-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.brand-card strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.brand-card em {
+    display: block;
+    font-size: 10px;
+    line-height: 1.1;
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.intro-section {
+    background: var(--pink);
+    padding: 45px 0;
+}
+
+.intro-section h2 {
+    margin: 0 0 12px;
+
+    font-size: clamp(24px, 4vw, 45px);
+    line-height: 1;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.intro-section p {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-size: clamp(16px, 2vw, 25px);
+    line-height: 1.15;
+}
+
+
+/* =====================================================
+   WORK GALLERY
+===================================================== */
+
+.work-section {
+    position: relative;
+
+    background: var(--charcoal);
+
+    padding: 50px 0 80px;
+
+    overflow: hidden;
+}
+
+.section-title {
+    margin: 0 0 38px;
+
+    font-size: clamp(26px, 4vw, 45px);
+    font-weight: 300;
+    text-align: center;
+}
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.project-card {
+    display: block;
+    position: relative;
+}
+
+.project-placeholder {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+/* HOMEPAGE PROJECT ROLLOVER */
+
+.project-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.project-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(33, 33, 32, .86);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 28px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.project-card:hover .project-overlay,
+.project-card:focus .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay strong {
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.project-overlay em {
+    max-width: 420px;
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.project-card:hover .project-placeholder {
+    transform: translateY(-5px);
+    opacity: 0.85;
+}
+
+
+/* =====================================================
+   OUTLINE BUTTONS
+===================================================== */
+
+.outline-button {
+    display: block;
+
+    width: max-content;
+
+    border: 1px solid var(--pink);
+
+    padding: 10px 24px;
+
+    margin: 38px auto 0;
+
+    font-size: 9px;
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.outline-button:hover {
+    background: var(--pink);
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   ABOUT PREVIEW
+===================================================== */
+
+.about-preview {
+    background: var(--charcoal);
+
+    padding: 25px 0 80px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.about-preview h2 {
+    margin: 0 0 28px;
+
+    font-size: clamp(25px, 4vw, 43px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+}
+
+.about-columns {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 65px;
+}
+
+.about-columns p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+}
+
+.about-button {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   ART & ILLUSTRATION
+===================================================== */
+
+/* ART */
+.art-section {
+    background: var(--pink);
+    padding: 50px 0 60px;
+}
+
+.art-section .section-title {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.art-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48% 42%;
+    column-gap: 10%;
+    align-items: start;
+}
+
+/* LEFT SIDE — SLIDESHOW */
+.art-column {
+    width: 100%;
+}
+
+.art-slides {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+    overflow: hidden;
+}
+
+.art-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.art-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.art-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* DARK HOVER OVERLAY */
+.art-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(33, 33, 32, 0.78);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 25px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    color: #ffffff;
+}
+
+.art-slide:hover .art-overlay {
+    opacity: 1;
+}
+
+.art-overlay strong {
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.art-overlay em {
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+}
+
+/* PREVIOUS / NEXT */
+.carousel-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.carousel-controls button {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #ffffff;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT SIDE — TEXT */
+.art-text {
+    width: 100%;
+    padding-top: 2px;
+}
+
+.art-text h3 {
+    margin: 0 0 18px;
+
+    font-size: clamp(20px, 3vw, 32px);
+    line-height: 1;
+
+    font-style: italic;
+    font-weight: 800;
+}
+
+.art-text p {
+    margin: 0 0 15px;
+
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+/* RESUME BUTTON */
+.art-text .dark-button {
+    display: inline-block;
+
+    border: 1px solid #000000;
+    background: transparent;
+    color: #fff;
+
+    padding: 10px 30px;
+    margin-top: 12px;
+
+    font-family: "TexGyreAdventor", Arial, sans-serif;
+    font-size: 9px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.art-text .dark-button:hover {
+    background: #000000;
+    color: #ffffff;
+}
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+    background: var(--light-grey);
+
+    color: var(--charcoal);
+
+    padding: 55px 0 70px;
+}
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.contact-info h2 {
+    margin: 0 0 18px;
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    line-height: 0.95;
+}
+
+.contact-details {
+    font-size: 10px;
+
+    line-height: 1.25;
+}
+
+.contact-details strong {
+    display: block;
+
+    margin-top: 14px;
+}
+
+.contact-details p {
+    margin: 4px 0;
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form span {
+    display: block;
+
+    color: var(--pink);
+
+    font-size: 8px;
+
+    font-style: italic;
+
+    margin-left: 7px;
+
+    margin-bottom: -13px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    /* Subtle white tint */
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border: 2px solid var(--charcoal);
+
+    padding: 8px;
+
+    color: var(--charcoal);
+
+    outline: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-form input {
+    height: 32px;
+}
+
+.contact-form textarea {
+    height: 75px;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--pink);
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* Submit */
+
+.submit-button {
+    align-self: flex-end;
+
+    margin-top: 10px;
+
+    border: none;
+
+    background: var(--pink);
+
+    color: #ffffff;
+
+    padding: 10px 32px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: #000000;
+
+    color: #ffffff;
+
+    padding: 50px 6% 25px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 70px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.footer-brand p {
+    font-size: 9px;
+
+    line-height: 1.45;
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.footer-column h3 {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+}
+
+.footer-column a {
+    font-size: 9px;
+}
+
+.footer-column a:hover {
+    color: var(--pink);
+}
+
+.footer-credit {
+    text-align: center;
+
+    margin: 50px 0 0;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE / TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .site-header {
+        width: 92%;
+    }
+
+    .header-right {
+        gap: 10px;
+
+        padding-right: 145px;
+    }
+
+    .main-nav {
+        gap: 6px;
+
+        padding: 6px 8px;
+    }
+
+    .hero-image {
+        width: 92%;
+    }
+
+    .content-width {
+        width: 92%;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-columns {
+        gap: 30px;
+    }
+
+    .art-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE / PHONE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .site-header {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .main-nav {
+        gap: 5px;
+    }
+
+    .main-nav a {
+        font-size: 7px;
+    }
+
+    .hero-section {
+        padding-top: 10px;
+
+        padding-bottom: 45px;
+    }
+
+    .brand-carousel-section {
+        padding-top: 30px;
+    }
+
+    .brand-track {
+        gap: 0;
+    }
+
+    .brand-set {
+        gap: 18px;
+
+        padding-right: 18px;
+    }
+
+    .brand-card,
+    .brand-image {
+        width: 95px;
+    }
+
+    .brand-image {
+        height: 95px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .about-columns {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}.about-photos {
+    padding-bottom: 80px; /* adjust as needed */
+}
